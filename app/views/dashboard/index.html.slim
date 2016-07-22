@@ -1,3 +1,12 @@
 center
     h1 Welcome to User Space!!!
-    = button_to 'log out', destroy_user_session_path, :method => "delete"
+    
+= button_to 'log out', destroy_user_session_path, :method => "delete"
+
+center
+    = form_for @post do |p|
+        = p.label :content
+        br
+        = p.text_area :content, :class => "content"
+        br
+        = p.submit
