@@ -1,3 +1,5 @@
+= javascript_include_tag Ckeditor.cdn_url
+
 center
     h1 Welcome to User Space!!!
     
@@ -7,6 +9,6 @@ center
     = form_for @post do |p|
         = p.label :content
         br
-        = p.text_area :content, :class => "content"
+        = p.cktext_area :content, :class => "content"
         br
         = p.submit
